@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "sculptpie",
+  "name": "SculptPie",
+  "description": "Fast, fully customisable pie menus for ZBrush: brushes, alphas, materials and any ZBrush button one flick away.",
+  "overview": "SculptPie gives ZBrush twenty pie menus that open at your cursor on a shortcut. Fill them with brushes, alphas, materials, buttons, switches and sliders, nest them in groups and rings, and style everything in a live editor. It reads your SculptShelf brush and alpha folders, can upscale icons with AI, and exports menus together with their external brushes as one shareable zip.",
+  "version": "1.3.0",
+  "assets": {
+    "banner": "SculptPie_banner.png",
+    "icon": "SculptPie.png"
+  },
+  "content": {
+    "readme": "README.md",
+    "features": "FEATURES.md"
+  },
+  "sourceDirectory": "files",
+  "targets": [
+    {
+      "app": "zbrush",
+      "os": "windows",
+      "supportedVersions": ["2026.1", "2026.2", "2026.3", "2027", "2027.1", "2027.2"],
+      "install": [
+        { "action": "copy", "source": "SculptPie.py", "destination": "${paths.zplugins}/SculptPie.py" },
+        { "action": "mkdir", "destination": "${paths.zplugins}/SculptPieData" },
+        { "action": "copy", "source": "SculptPieData", "destination": "${paths.zplugins}/SculptPieData" }
+      ]
+    }
+  ]
+}
